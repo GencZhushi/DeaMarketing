@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 8.5in;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tagline {
+    text-align: right;
+}
+
+.get-kinspired {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8B1874;
+    line-height: 1.2;
+}
+
+.subtagline {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #333;
+    margin-top: 2px;
+}
+
+/* Content Styles */
+.form-content {
+    padding: 40px 50px;
+}
+
+.main-title {
+    font-size: 24px;
+    color: #8B1874;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.title-input {
+    color: #8B1874;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.dynamic-field {
+    color: #8B1874;
+    font-weight: bold;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #333;
+    margin: 30px 0;
+}
+
+.section-title {
+    font-size: 20px;
+    color: #8B1874;
+    margin: 25px 0 15px 0;
+}
+
+.subsection-title {
+    font-size: 16px;
+    color: #8B1874;
+    margin: 20px 0 10px 0;
+}
+
+.subtitle-text {
+    font-size: 14px;
+    color: #888;
+    font-weight: normal;
+}
+
+.purple-text {
+    color: #8B1874;
+}
+
+/* Form Field Styles */
+.field-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+textarea {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-bottom-color: #8B1874;
+}
+
+.inline-input {
+    display: inline-block;
+    min-width: 150px;
+    background: transparent;
+}
+
+.full-width-input {
+    width: 100%;
+    display: block;
+}
+
+.list-input {
+    width: calc(100% - 20px);
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+}
+
+/* Table Styles */
+.alignment-table {
+    margin: 20px 0;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+/* Risk Assessment Styles */
+.risk-items {
+    margin: 20px 0;
+}
+
+.risk-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.risk-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.risk-checkbox.green {
+    accent-color: #4CAF50;
+}
+
+.risk-checkbox.yellow {
+    accent-color: #FFC107;
+}
+
+.disclaimer {
+    font-size: 12px;
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    position: relative;
+    height: 200px;
+    margin-top: 50px;
+    overflow: hidden;
+    background: white;
+}
+
+.footer-design {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+}
+
+/* Dark purple triangle on left */
+.footer-design::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 200px solid #3D1E33;
+}
+
+/* Pink circle */
+.footer-design::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #E8B4D9;
+    z-index: 3;
+}
+
+/* Pink diagonal shape using pseudo element on footer */
+.footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 180px solid #E8B4D9;
+    transform: rotate(-15deg);
+    transform-origin: bottom right;
+    z-index: 2;
+}
+
+/* Small pink diamond/square */
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    right: 140px;
+    width: 40px;
+    height: 40px;
+    background: #E8B4D9;
+    transform: rotate(45deg);
+    z-index: 4;
+}
+
+.footer-contact {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    font-size: 13px;
+    color: #333;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Page Break for Print/Export */
+.page-break {
+    page-break-after: always;
+    margin: 60px 0;
+    border-top: 1px dashed #ccc;
+    padding-top: 40px;
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #8B1874;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6D1159;
+}
+
+.btn-secondary {
+    background-color: #E8B4D9;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #D89FC9;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .form-actions {
+        display: none;
+    }
+    
+    .page-break {
+        page-break-after: always;
+        margin: 0;
+        border: none;
+        padding: 0;
+    }
+    
+    input[type="text"],
+    textarea {
+        border: none;
+        padding: 0;
+    }
+}
+
+/* Preview View Styles */
+#preview-view {
+    background: white;
+}
+
+#preview-view .header,
+#preview-view .footer {
+    background: white;
+}
+
+#preview-view input,
+#preview-view textarea {
+    border: none;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .header,
+    .form-content {
+        padding: 20px;
+    }
+    
+    .two-column-grid {
+        grid-template-columns: 1fr;
+    }
+}

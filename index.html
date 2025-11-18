@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinspire CoreHire™ Candidate Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form View -->
+        <div id="form-view">
+            <div class="header">
+                <div class="logo">
+                    <svg width="120" height="80" viewBox="0 0 120 80">
+                        <circle cx="50" cy="35" r="8" fill="#8B1874"/>
+                        <path d="M 50 43 L 45 55 L 42 70" stroke="#8B1874" stroke-width="4" fill="none"/>
+                        <path d="M 50 43 L 55 55 L 60 68" stroke="#8B1874" stroke-width="4" fill="none"/>
+                        <path d="M 50 43 L 48 55 L 35 62" stroke="#8B1874" stroke-width="4" fill="none"/>
+                        <path d="M 35 62 L 25 58 L 20 50" stroke="#8B1874" stroke-width="4" fill="none"/>
+                    </svg>
+                    <span class="logo-text">inspire</span>
+                </div>
+                <div class="tagline">
+                    <div class="get-kinspired">GET<br>KINSPIRED.</div>
+                    <div class="subtagline">WHERE KINSPIRED LEADERS THRIVE</div>
+                </div>
+            </div>
+
+            <div class="form-content">
+                <h1 class="main-title">Kinspire CoreHire™ Candidate Profile: <input type="text" id="full_name" placeholder="FULL_NAME" class="inline-input title-input"></h1>
+                
+                <div class="field-group">
+                    <input type="text" id="headline_tagline" placeholder="HEADLINE_TAGLINE" class="full-width-input">
+                </div>
+
+                <hr class="divider">
+
+                <p class="intro-text">This analysis uses Kinspire's proprietary CoreHire™ methodology to evaluate how <span class="dynamic-field" id="display_full_name_1">[[FULL_NAME]]</span> aligns with the position of <span class="dynamic-field" id="display_role_title_1">[[ROLE_TITLE]]</span> at <span class="dynamic-field" id="display_company_1">[[COMPANY]]</span>. CoreHire™ goes beyond resumes to assess values, leadership style, and growth trajectory—offering a predictive view of role fit and long-term success.</p>
+
+                <div class="field-group">
+                    <label><strong>Job Position:</strong></label>
+                    <input type="text" id="company" placeholder="COMPANY" class="inline-input"> – <input type="text" id="role_title" placeholder="ROLE_TITLE" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <label><strong class="purple-text">Potential for Success:</strong></label>
+                    <input type="text" id="success_level" placeholder="SUCCESS_LEVEL" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <textarea id="opening_narrative" placeholder="OPENING_NARRATIVE" rows="3" class="full-width-input"></textarea>
+                </div>
+
+                <h2 class="section-title">Success Factors</h2>
+                <div class="field-group">
+                    • <input type="text" id="success_factor_1" placeholder="SUCCESS_FACTOR_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="success_factor_2" placeholder="SUCCESS_FACTOR_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="success_factor_3" placeholder="SUCCESS_FACTOR_3" class="list-input">
+                </div>
+
+                <h2 class="section-title">Support Needs</h2>
+                <div class="field-group">
+                    • <input type="text" id="support_1" placeholder="SUPPORT_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="support_2" placeholder="SUPPORT_2" class="list-input">
+                </div>
+
+                <hr class="divider">
+
+                <h2 class="section-title">Candidate & Role Alignment – <span class="dynamic-field" id="display_role_title_2">[[ROLE_TITLE]]</span>, <span class="dynamic-field" id="display_company_2">[[COMPANY]]</span> – <span class="subtitle-text">How the candidate's skills and style align with the role's key responsibilities and success factors.</span></h2>
+
+                <div class="alignment-table">
+                    <div class="table-header">
+                        <div>Strategic Need</div>
+                        <div>Matching Strengths</div>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="page-break"></div>
+
+                <h2 class="section-title">CoreHire™ Candidate Portrait & Positioning</h2>
+                <p class="subtitle-text">The following provides a multidimensional snapshot of the candidate—highlighting not just skills and experience, but also motivations, leadership style, behavioral profile, and growth potential. Together, these insights tell the story of who the candidate is, how they lead, and where they are best positioned to thrive.</p>
+
+                <h3 class="subsection-title">Signature Skills & Superpowers – <span class="subtitle-text">What makes the candidate stand out in leadership and impact.</span></h3>
+                <div class="field-group">
+                    • <input type="text" id="skill_1" placeholder="SKILL_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="skill_2" placeholder="SKILL_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="skill_3" placeholder="SKILL_3" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="skill_4" placeholder="SKILL_4" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="skill_5" placeholder="SKILL_5" class="list-input">
+                </div>
+
+                <h3 class="subsection-title">Motivators & Values – <span class="subtitle-text">What drives the candidate and underpins their long-term engagement.</span></h3>
+                <div class="field-group">
+                    • <input type="text" id="value_1" placeholder="VALUE_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="value_2" placeholder="VALUE_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="value_3" placeholder="VALUE_3" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="value_4" placeholder="VALUE_4" class="list-input">
+                </div>
+
+                <h3 class="subsection-title">Ideal Work Environment – <span class="subtitle-text">Cultural and organizational conditions that bring out their best performance.</span></h3>
+                <div class="field-group">
+                    • <input type="text" id="env_1" placeholder="ENV_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="env_2" placeholder="ENV_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="env_3" placeholder="ENV_3" class="list-input">
+                </div>
+
+                <!-- Page 3 -->
+                <div class="page-break"></div>
+
+                <div class="two-column-grid">
+                    <div>
+                        <div class="field-group">
+                            <input type="text" id="need_1" placeholder="NEED_1" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="need_2" placeholder="NEED_2" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="need_3" placeholder="NEED_3" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="need_4" placeholder="NEED_4" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="need_5" placeholder="NEED_5" class="list-input">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="field-group">
+                            <input type="text" id="match_1" placeholder="MATCH_1" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="match_2" placeholder="MATCH_2" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="match_3" placeholder="MATCH_3" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="match_4" placeholder="MATCH_4" class="list-input">
+                        </div>
+                        <div class="field-group">
+                            <input type="text" id="match_5" placeholder="MATCH_5" class="list-input">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <h2 class="section-title">Corporate DNA Alignment (Overall Summary) – <span class="subtitle-text">How the candidate's natural strengths align with the company's culture.</span></h2>
+
+                <div class="field-group">
+                    <strong>Overall Alignment:</strong> <input type="text" id="overall_alignment_descriptor" placeholder="OVERALL_ALIGNMENT_DESCRIPTOR" class="inline-input"> —
+                    <input type="text" id="overall_alignment_summary" placeholder="OVERALL_ALIGNMENT_SUMMARY" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <strong>Mission —</strong> <input type="text" id="mission_descriptor" placeholder="MISSION_DESCRIPTOR" class="inline-input">: <input type="text" id="mission_note" placeholder="MISSION_NOTE" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <strong>Vision —</strong> <input type="text" id="vision_descriptor" placeholder="VISION_DESCRIPTOR" class="inline-input">: <input type="text" id="vision_note" placeholder="VISION_NOTE" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <strong>Values —</strong> <input type="text" id="values_descriptor" placeholder="VALUES_DESCRIPTOR" class="inline-input">: <input type="text" id="values_note" placeholder="VALUES_NOTE" class="inline-input">
+                </div>
+
+                <div class="field-group">
+                    <strong>Pillars —</strong> <input type="text" id="pillars_descriptor" placeholder="PILLARS_DESCRIPTOR" class="inline-input">: <input type="text" id="pillars_note" placeholder="PILLARS_NOTE" class="inline-input">
+                </div>
+
+                <hr class="divider">
+
+                <h2 class="section-title">Career Highlights – <span class="subtitle-text">Key professional milestones and role achievements that illustrate the candidate's progression, impact, and leadership capacity.</span></h2>
+                <div class="field-group">
+                    • <input type="text" id="career_1" placeholder="CAREER_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="career_2" placeholder="CAREER_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="career_3" placeholder="CAREER_3" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="career_4" placeholder="CAREER_4" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="career_5" placeholder="CAREER_5" class="list-input">
+                </div>
+
+                <!-- Page 4 -->
+                <div class="page-break"></div>
+
+                <h2 class="section-title">Growth & Integration Path – <span class="subtitle-text">The candidate's growth direction, what fuels them, blind spots to navigate, and practices that support alignment.</span></h2>
+
+                <div class="field-group">
+                    • <strong>Growth Vector:</strong> <input type="text" id="growth_vector" placeholder="GROWTH_VECTOR" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <strong>Motivators:</strong> <input type="text" id="growth_motivators" placeholder="GROWTH_MOTIVATORS" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <strong>Potential Blind Spots:</strong> <input type="text" id="blind_spots" placeholder="BLIND_SPOTS" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <strong>Integration Practices:</strong> <input type="text" id="practices" placeholder="PRACTICES" class="list-input">
+                </div>
+
+                <hr class="divider">
+
+                <h2 class="section-title">Public Records & Online Footprint - <span class="subtitle-text">Summary of the candidate's professional presence and any publicly available records that may inform employer evaluation.</span></h2>
+
+                <div class="field-group">
+                    • <input type="text" id="public_1" placeholder="PUBLIC_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="public_2" placeholder="PUBLIC_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="public_3" placeholder="PUBLIC_3" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="public_4" placeholder="PUBLIC_4" class="list-input">
+                </div>
+
+                <h2 class="section-title">Risk Assessment Summary</h2>
+
+                <div class="risk-items">
+                    <div class="risk-item">
+                        <input type="checkbox" id="risk_reputation" class="risk-checkbox green">
+                        <label for="risk_reputation"><strong>Reputation Risk:</strong> <input type="text" id="risk_reputation_text" placeholder="RISK_REPUTATION" class="inline-input"></label>
+                    </div>
+                    <div class="risk-item">
+                        <input type="checkbox" id="risk_tone" class="risk-checkbox yellow">
+                        <label for="risk_tone"><strong>Professional Tone:</strong> <input type="text" id="risk_tone_text" placeholder="RISK_TONE" class="inline-input"></label>
+                    </div>
+                    <div class="risk-item">
+                        <input type="checkbox" id="risk_content" class="risk-checkbox">
+                        <label for="risk_content"><strong>Content Risk:</strong> <input type="text" id="risk_content_text" placeholder="RISK_CONTENT" class="inline-input"></label>
+                    </div>
+                    <div class="risk-item">
+                        <input type="checkbox" id="risk_background" class="risk-checkbox" checked>
+                        <label for="risk_background"><strong>Background Red Flags:</strong> <input type="text" id="risk_background_text" placeholder="RISK_BACKGROUND" class="inline-input"></label>
+                    </div>
+                </div>
+
+                <p class="disclaimer"><em>This risk assessment is based on publicly available information and proprietary analysis. Kinspire recommends that employers conduct independent verification prior to any hiring decision. Kinspire is not liable for outcomes resulting from incomplete vetting.</em></p>
+
+                <hr class="divider">
+
+                <!-- Page 5 -->
+                <div class="page-break"></div>
+
+                <h2 class="section-title">Leadership Style that Fuels Success – <span class="subtitle-text">How the candidate naturally leaders and inspires others.</span></h2>
+
+                <div class="field-group">
+                    <strong>**Leadership Archetype:**</strong> <input type="text" id="leadership_archetype" placeholder="LEADERSHIP_ARCHETYPE" class="inline-input">
+                </div>
+                <div class="field-group">
+                    - <input type="text" id="leadership_style_sentence" placeholder="LEADERSHIP_STYLE_SENTENCE" class="list-input">
+                </div>
+                <div class="field-group">
+                    - <input type="text" id="leadership_impact" placeholder="LEADERSHIP_IMPACT" class="list-input">
+                </div>
+                <div class="field-group">
+                    - <input type="text" id="leadership_distinction" placeholder="LEADERSHIP_DISTINCTION" class="list-input">
+                </div>
+
+                <h2 class="section-title">Behavioral & Communication Insights – <span class="subtitle-text">How the candidate naturally connects, influences, and makes decisions.</span></h2>
+
+                <div class="field-group">
+                    • <input type="text" id="behavior_1" placeholder="BEHAVIOR_1" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="behavior_2" placeholder="BEHAVIOR_2" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="behavior_3" placeholder="BEHAVIOR_3" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="behavior_4" placeholder="BEHAVIOR_4" class="list-input">
+                </div>
+                <div class="field-group">
+                    • <input type="text" id="behavior_5" placeholder="BEHAVIOR_5" class="list-input">
+                </div>
+
+                <h2 class="section-title">Predicted Assessment Profile – <span class="subtitle-text">Based on observed behaviors, career trajectory, and leadership presence.</span></h2>
+
+                <div class="field-group">
+                    <strong>DISC:</strong> <input type="text" id="disc" placeholder="DISC" class="inline-input">
+                </div>
+                <div class="field-group">
+                    <strong>MBTI:</strong> <input type="text" id="mbti" placeholder="MBTI" class="inline-input">
+                </div>
+                <div class="field-group">
+                    <strong>Enneagram:</strong> <input type="text" id="enneagram" placeholder="ENNEAGRAM" class="inline-input">
+                </div>
+                <div class="field-group">
+                    <strong>Culture Talk:</strong> <input type="text" id="culture_talk" placeholder="CULTURE_TALK" class="inline-input">
+                </div>
+                <div class="field-group">
+                    <strong>Culture Index:</strong> <input type="text" id="culture_index" placeholder="CULTURE_INDEX" class="inline-input">
+                </div>
+                <div class="field-group">
+                    <strong>StrengthsFinder:</strong> <input type="text" id="strengthsfinder" placeholder="STRENGTHSFINDER" class="inline-input">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="export-pdf" class="btn btn-primary">Export as PDF</button>
+                    <button type="button" id="export-word" class="btn btn-secondary">Export as Word</button>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-design"></div>
+                <div class="footer-contact">
+                    <p>📞 +1.520.488.7277</p>
+                    <p>✉️ getkinspired@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview View (for export) -->
+        <div id="preview-view" style="display: none;">
+            <!-- This will be populated when exporting -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

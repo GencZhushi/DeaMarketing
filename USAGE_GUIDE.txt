@@ -1,0 +1,134 @@
+═══════════════════════════════════════════════════════════════════════════════
+                 KINSPIRE COREHIRE™ CANDIDATE PROFILE FORM
+                              QUICK START GUIDE
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 GETTING STARTED
+───────────────────────────────────────────────────────────────────────────────
+
+1. Open the application:
+   → Double-click "index.html" 
+   → The form will open in your default web browser
+
+2. Fill out the form:
+   → All fields with brackets [[FIELD_NAME]] are editable
+   → Fill in as many or as few fields as you need
+   → The form will automatically update dynamic references
+
+3. Export your document:
+   → Click "Export as PDF" for a PDF document
+   → Click "Export as Word" for a Word document (.doc)
+   → Files will be saved to your Downloads folder
+
+
+📝 FIELD REFERENCE GUIDE
+───────────────────────────────────────────────────────────────────────────────
+
+PAGE 1 - CANDIDATE OVERVIEW
+───────────────────────────────────────────────────────────────────────────────
+• Full Name                    - Candidate's full name
+• Headline/Tagline             - Brief professional headline
+• Company                      - Target company name
+• Role Title                   - Position being applied for
+• Success Level                - Predicted success rating
+• Opening Narrative            - Overview paragraph about candidate
+• Success Factors (1-3)        - Three key success indicators
+• Support Needs (1-2)          - Two areas where support is needed
+
+
+PAGE 2 - CANDIDATE PORTRAIT
+───────────────────────────────────────────────────────────────────────────────
+• Skills (1-5)                 - Five signature skills/superpowers
+• Values (1-4)                 - Four core motivators/values
+• Environment (1-3)            - Three ideal work conditions
+
+
+PAGE 3 - ALIGNMENT & DNA
+───────────────────────────────────────────────────────────────────────────────
+• Needs (1-5)                  - Five strategic needs
+• Matches (1-5)                - Five matching strengths
+• Overall Alignment            - Descriptor and summary
+• Mission                      - Mission descriptor and note
+• Vision                       - Vision descriptor and note
+• Values                       - Values descriptor and note
+• Pillars                      - Pillars descriptor and note
+• Career Highlights (1-5)      - Five career achievements
+
+
+PAGE 4 - GROWTH & RISK
+───────────────────────────────────────────────────────────────────────────────
+• Growth Vector                - Growth direction
+• Growth Motivators            - What drives growth
+• Blind Spots                  - Areas to watch
+• Integration Practices        - Alignment practices
+• Public Records (1-4)         - Four public footprint items
+• Risk Assessments (4)         - Four risk categories with descriptions
+
+
+PAGE 5 - LEADERSHIP & ASSESSMENT
+───────────────────────────────────────────────────────────────────────────────
+• Leadership Archetype         - Leadership style type
+• Leadership Style Sentence    - Style description
+• Leadership Impact            - Impact statement
+• Leadership Distinction       - What makes them unique
+• Behaviors (1-5)              - Five behavioral insights
+• DISC                         - DISC profile
+• MBTI                         - Myers-Briggs type
+• Enneagram                    - Enneagram number
+• Culture Talk                 - Culture Talk result
+• Culture Index                - Culture Index score
+• StrengthsFinder              - Top strengths
+
+
+💡 TIPS FOR BEST RESULTS
+───────────────────────────────────────────────────────────────────────────────
+
+✓ Complete all fields for the most professional output
+✓ Use clear, concise language
+✓ Review your entries before exporting
+✓ Keep a copy of your text in a separate document
+✓ For PDF: Best viewed in Adobe Acrobat Reader
+✓ For Word: Best opened in Microsoft Word
+
+
+⚙️ TECHNICAL REQUIREMENTS
+───────────────────────────────────────────────────────────────────────────────
+
+✓ Modern web browser (Chrome, Firefox, Edge, Safari)
+✓ JavaScript enabled
+✓ Internet connection (for external libraries)
+✓ No installation required
+✓ Works on Windows, Mac, and Linux
+
+
+❓ TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────────────
+
+Problem: Export button doesn't work
+Solution: Check that JavaScript is enabled and you have internet connection
+
+Problem: PDF takes a long time to generate
+Solution: This is normal for multi-page documents, please wait
+
+Problem: Word document formatting looks different
+Solution: Open in Microsoft Word for best compatibility
+
+Problem: Fields aren't saving
+Solution: The form doesn't auto-save. Copy important text elsewhere
+
+Problem: Can't see the full form
+Solution: Scroll down - the form spans multiple pages
+
+
+📞 SUPPORT
+───────────────────────────────────────────────────────────────────────────────
+
+For questions or technical support:
+
+Phone: +1.520.488.7277
+Email: getkinspired@gmail.com
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        © 2024 Kinspire - All Rights Reserved
+═══════════════════════════════════════════════════════════════════════════════
