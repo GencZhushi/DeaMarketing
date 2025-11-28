@@ -821,7 +821,7 @@ textarea {
     pointer-events: none;
 }
 
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 768px) {
     .container {
         max-width: 100%;
@@ -834,5 +834,346 @@ textarea {
     
     .two-column-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 576px) {
+    /* Base container */
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* AI Section */
+    .ai-section {
+        padding: 20px 15px;
+    }
+
+    .ai-section-header h2 {
+        font-size: 20px;
+    }
+
+    .ai-description {
+        font-size: 14px;
+    }
+
+    .api-config {
+        padding: 15px;
+    }
+
+    .api-key-input-group {
+        flex-direction: column;
+    }
+
+    .api-status {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* Upload Section */
+    .upload-section,
+    .job-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .upload-section h3,
+    .job-section h3 {
+        font-size: 16px;
+    }
+
+    .upload-area {
+        padding: 25px 15px;
+    }
+
+    .upload-placeholder .upload-icon {
+        font-size: 36px;
+    }
+
+    .upload-placeholder p {
+        font-size: 14px;
+    }
+
+    .upload-preview {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .upload-preview .file-name {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    /* Job Input Tabs */
+    .job-input-tabs {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .tab-content textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Analysis Controls */
+    .analysis-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-large {
+        padding: 12px 25px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Header */
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo svg {
+        width: 80px;
+        height: 55px;
+    }
+
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .tagline {
+        text-align: center;
+    }
+
+    .get-kinspired {
+        font-size: 22px;
+    }
+
+    .subtagline {
+        font-size: 10px;
+    }
+
+    /* Form Content */
+    .form-content {
+        padding: 20px 15px;
+    }
+
+    .main-title {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .title-input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .intro-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .section-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .subsection-title {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .subtitle-text {
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    /* Field Groups */
+    .field-group {
+        margin-bottom: 12px;
+    }
+
+    .field-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .inline-input {
+        display: block;
+        width: 100%;
+        min-width: unset;
+        margin-top: 5px;
+    }
+
+    .list-input {
+        width: 100%;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    /* Table Styles */
+    .table-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .table-header div:first-child::after {
+        content: " / Matching Strengths";
+    }
+
+    .table-header div:last-child {
+        display: none;
+    }
+
+    .two-column-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Risk Assessment */
+    .risk-items {
+        margin: 15px 0;
+    }
+
+    .risk-item {
+        flex-wrap: wrap;
+        margin: 12px 0;
+    }
+
+    .risk-item label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .risk-item .inline-input {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .disclaimer {
+        font-size: 11px;
+    }
+
+    /* Form Actions */
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin: 30px 0;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* Footer */
+    .footer {
+        height: 180px;
+        margin-top: 30px;
+    }
+
+    .footer-graphics {
+        height: 180px;
+    }
+
+    .footer-left-graphic {
+        width: 80px;
+        height: 160px;
+    }
+
+    .footer-right-graphic {
+        width: 80px;
+        height: 160px;
+    }
+
+    .footer-contact {
+        bottom: 30px;
+        font-size: 12px;
+        width: 100%;
+        padding: 0 80px;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+    /* Page breaks */
+    .page-break {
+        margin: 40px 0;
+        padding-top: 30px;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
+
+    /* Manual Fields */
+    .field-row input,
+    .field-row textarea {
+        padding: 10px 12px;
+    }
+
+    /* Text Preview */
+    .text-preview textarea {
+        font-size: 11px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+    .ai-section-header h2 {
+        font-size: 18px;
+    }
+
+    .get-kinspired {
+        font-size: 20px;
+    }
+
+    .main-title {
+        font-size: 16px;
+    }
+
+    .title-input {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 15px;
+    }
+
+    .footer-contact {
+        padding: 0 60px;
+        font-size: 11px;
+    }
+
+    .footer-left-graphic,
+    .footer-right-graphic {
+        width: 60px;
     }
 }
