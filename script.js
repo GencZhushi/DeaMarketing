@@ -247,11 +247,22 @@ function createPreviewHTML() {
     preview.style.position = 'absolute';
     preview.style.left = '-9999px';
     preview.style.width = '210mm';
-    preview.style.background = 'white';
+    preview.style.background = '#fdf9fa';
+    
+    // Background style for PDF pages
+    const pageBackground = `
+        background: #fdf9fa;
+        background-image: 
+            radial-gradient(circle at 20% 30%, rgba(232, 180, 217, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(232, 180, 217, 0.06) 0%, transparent 40%),
+            radial-gradient(circle at 60% 60%, rgba(232, 180, 217, 0.05) 0%, transparent 45%),
+            radial-gradient(circle at 30% 80%, rgba(232, 180, 217, 0.07) 0%, transparent 50%);
+        min-height: 297mm;
+    `;
     
     // Page 1
     preview.innerHTML = `
-        <div class="pdf-page">
+        <div class="pdf-page" style="${pageBackground}">
             ${createHeader()}
             <div style="padding: 40px 50px;">
                 <h1 style="color: #8B1874; font-size: 24px; margin-bottom: 20px;">
@@ -292,7 +303,7 @@ function createPreviewHTML() {
             ${createFooter()}
         </div>
         
-        <div class="pdf-page page-break">
+        <div class="pdf-page page-break" style="${pageBackground}">
             ${createHeader()}
             <div style="padding: 40px 50px;">
                 <h2 style="color: #8B1874;">CoreHire™ Candidate Portrait & Positioning</h2>
@@ -328,7 +339,7 @@ function createPreviewHTML() {
             ${createFooter()}
         </div>
         
-        <div class="pdf-page page-break">
+        <div class="pdf-page page-break" style="${pageBackground}">
             ${createHeader()}
             <div style="padding: 40px 50px;">
                 <div class="two-column">
@@ -373,7 +384,7 @@ function createPreviewHTML() {
             ${createFooter()}
         </div>
         
-        <div class="pdf-page page-break">
+        <div class="pdf-page page-break" style="${pageBackground}">
             ${createHeader()}
             <div style="padding: 40px 50px;">
                 <h2 style="color: #8B1874;">Growth & Integration Path</h2>
@@ -407,7 +418,7 @@ function createPreviewHTML() {
             ${createFooter()}
         </div>
         
-        <div class="pdf-page">
+        <div class="pdf-page" style="${pageBackground}">
             ${createHeader()}
             <div style="padding: 40px 50px;">
                 <h2 style="color: #8B1874;">Leadership Style that Fuels Success</h2>
@@ -448,7 +459,7 @@ function createPreviewHTML() {
 // Create header HTML
 function createHeader() {
     return `
-        <div class="header" style="display: flex; justify-content: space-between; padding: 30px 50px; border-bottom: 1px solid #e0e0e0;">
+        <div class="header" style="display: flex; justify-content: space-between; padding: 30px 50px; background: transparent;">
             <div class="logo" style="display: flex; align-items: center; gap: 10px;">
                 <svg width="60" height="60" viewBox="0 0 120 80">
                     <circle cx="50" cy="35" r="8" fill="#8B1874"/>
@@ -470,13 +481,34 @@ function createHeader() {
 // Create footer HTML
 function createFooter() {
     return `
-        <div class="footer" style="position: relative; height: 150px; margin-top: 30px;">
-            <div style="position: absolute; bottom: 0; left: 0; width: 200px; height: 150px; background: #3D1E33; clip-path: polygon(0 100%, 100% 0, 100% 100%);"></div>
-            <div style="position: absolute; bottom: 20px; right: 50px; width: 60px; height: 60px; border-radius: 50%; background: #E8B4D9;"></div>
-            <div style="position: absolute; bottom: 30px; right: 20px; width: 0; height: 0; border-left: 80px solid transparent; border-bottom: 100px solid #E8B4D9; transform: rotate(-25deg);"></div>
-            <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 10; font-size: 12px;">
-                <p>📞 +1.520.488.7277</p>
-                <p>✉️ getkinspired@gmail.com</p>
+        <div class="footer" style="position: relative; height: 180px; margin-top: 30px; overflow: hidden;">
+            <!-- Left decorative shape - Dark purple abstract angular shape -->
+            <div style="position: absolute; bottom: 0; left: 0; width: 130px; height: 180px;">
+                <svg viewBox="0 0 150 200" preserveAspectRatio="xMinYMax meet" style="width: 100%; height: 100%;">
+                    <path d="M0 200 L0 100 L25 70 L25 0 L50 0 L50 50 L35 80 L60 120 L85 200 L55 200 L35 150 L35 200 Z" fill="#3D1E33"/>
+                    <path d="M65 200 L90 140 L115 200 Z" fill="#3D1E33"/>
+                </svg>
+            </div>
+            <!-- Right decorative shape - Pink pac-man style circle -->
+            <div style="position: absolute; bottom: 0; right: 0; width: 110px; height: 180px;">
+                <svg viewBox="0 0 120 200" preserveAspectRatio="xMaxYMax meet" style="width: 100%; height: 100%;">
+                    <path d="M120 130 A70 70 0 1 0 120 135 L60 130 L60 50 L120 50 Z" fill="#F5A3C7"/>
+                </svg>
+            </div>
+            <!-- Contact info -->
+            <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); text-align: left; z-index: 10; font-size: 12px;">
+                <p style="margin: 5px 0; display: flex; align-items: center; gap: 8px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#4CAF50">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    +1.520.488.7277
+                </p>
+                <p style="margin: 5px 0; display: flex; align-items: center; gap: 8px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#EA4335">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    getkinspired@gmail.com
+                </p>
             </div>
         </div>
     `;

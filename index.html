@@ -5,9 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinspire CoreHire™ Candidate Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- PDF.js for extracting text from PDF files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        // Set PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
 </head>
 <body>
     <div class="container">
+        <!-- AI Analysis Section (appears first) -->
+        <div id="ai-analysis-section" class="ai-section">
+            <div class="ai-section-header">
+                <h2>🤖 AI-Powered Candidate Analysis</h2>
+                <p class="ai-description">Upload a CV and provide job details. Our AI will analyze the candidate and auto-fill the profile.</p>
+            </div>
+            
+            <!-- Server Status Display -->
+            <div class="api-config">
+                <div id="api-status" class="api-status loading">
+                    <span class="status-icon">⏳</span>
+                    <span class="status-text">Checking server connection...</span>
+                </div>
+            </div>
+
+            <!-- CV Upload Section -->
+            <div class="upload-section">
+                <h3>📄 Upload CV/Resume</h3>
+                <div class="upload-area" id="cv-drop-zone">
+                    <input type="file" id="cv-upload" accept=".pdf,.doc,.docx,.txt" hidden>
+                    <div class="upload-placeholder">
+                        <span class="upload-icon">📁</span>
+                        <p>Drag & drop your CV here or <button type="button" id="cv-browse-btn" class="link-btn">browse files</button></p>
+                        <small>Supported formats: PDF, DOC, DOCX, TXT</small>
+                    </div>
+                    <div class="upload-preview" id="cv-preview" style="display: none;">
+                        <span class="file-icon">📄</span>
+                        <span class="file-name" id="cv-file-name"></span>
+                        <button type="button" id="cv-remove-btn" class="btn-remove">✕</button>
+                    </div>
+                </div>
+                <div id="cv-text-preview" class="text-preview" style="display: none;">
+                    <h4>Extracted CV Text:</h4>
+                    <textarea id="cv-extracted-text" rows="6" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- Job Description Section -->
+            <div class="job-section">
+                <h3>💼 Job Position Details</h3>
+                <div class="job-input-tabs">
+                    <button type="button" class="tab-btn active" data-tab="paste">Paste Full Description</button>
+                    <button type="button" class="tab-btn" data-tab="manual">Enter Key Details</button>
+                </div>
+                
+                <div class="tab-content active" id="tab-paste">
+                    <textarea id="job-description-full" rows="8" placeholder="Paste the complete job posting here...&#10;&#10;Include: Job title, company name, responsibilities, requirements, qualifications, etc."></textarea>
+                </div>
+                
+                <div class="tab-content" id="tab-manual" style="display: none;">
+                    <div class="manual-fields">
+                        <div class="field-row">
+                            <label>Job Title:</label>
+                            <input type="text" id="job-title-input" placeholder="e.g., Senior Marketing Manager">
+                        </div>
+                        <div class="field-row">
+                            <label>Company Name:</label>
+                            <input type="text" id="company-name-input" placeholder="e.g., Acme Corporation">
+                        </div>
+                        <div class="field-row">
+                            <label>Key Responsibilities:</label>
+                            <textarea id="job-responsibilities" rows="3" placeholder="Main duties and responsibilities..."></textarea>
+                        </div>
+                        <div class="field-row">
+                            <label>Required Skills/Qualifications:</label>
+                            <textarea id="job-requirements" rows="3" placeholder="Required skills, experience, education..."></textarea>
+                        </div>
+                        <div class="field-row">
+                            <label>Company Culture/Values (optional):</label>
+                            <textarea id="company-culture" rows="2" placeholder="Company mission, values, culture..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Controls -->
+            <div class="analysis-controls">
+                <button type="button" id="analyze-btn" class="btn btn-primary btn-large" disabled>
+                    <span class="btn-text">🔍 Analyze & Fill Profile</span>
+                    <span class="btn-loading" style="display: none;">⏳ Analyzing...</span>
+                </button>
+                <button type="button" id="clear-analysis-btn" class="btn btn-secondary">Clear All</button>
+            </div>
+
+            <!-- Analysis Status -->
+            <div id="analysis-status" class="analysis-status" style="display: none;">
+                <div class="status-message"></div>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+        </div>
+
         <!-- Form View -->
         <div id="form-view">
             <div class="header">
@@ -338,10 +435,46 @@
             </div>
 
             <div class="footer">
-                <div class="footer-design"></div>
+                <div class="footer-graphics">
+                    <!-- Left decorative shape - Dark purple abstract angular shape -->
+                    <div class="footer-left-graphic">
+                        <svg viewBox="0 0 150 200" preserveAspectRatio="xMinYMax meet">
+                            <!-- Abstract angular K-like shape matching the image -->
+                            <path d="M0 200 L0 100 L25 70 L25 0 L50 0 L50 50 L35 80 L60 120 L85 200 L55 200 L35 150 L35 200 Z" fill="#3D1E33"/>
+                            <!-- Additional triangle piece -->
+                            <path d="M65 200 L90 140 L115 200 Z" fill="#3D1E33"/>
+                        </svg>
+                    </div>
+                    <!-- Right decorative shape - Pink pac-man style circle -->
+                    <div class="footer-right-graphic">
+                        <svg viewBox="0 0 120 200" preserveAspectRatio="xMaxYMax meet">
+                            <!-- Pink circle with wedge cutout -->
+                            <path d="M120 130 
+                                     A70 70 0 1 0 120 135 
+                                     L60 130 
+                                     L60 50 
+                                     L120 50 
+                                     Z" fill="#F5A3C7"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="footer-contact">
-                    <p>📞 +1.520.488.7277</p>
-                    <p>✉️ getkinspired@gmail.com</p>
+                    <p>
+                        <span class="contact-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#4CAF50">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </span>
+                        +1.520.488.7277
+                    </p>
+                    <p>
+                        <span class="contact-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#EA4335">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </span>
+                        getkinspired@gmail.com
+                    </p>
                 </div>
             </div>
         </div>
@@ -356,6 +489,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://unpkg.com/docx@7.8.2/build/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <!-- JSZip for DOCX file support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="script.js"></script>
+    <!-- AI Integration Module -->
+    <script src="ai-integration.js"></script>
 </body>
 </html>

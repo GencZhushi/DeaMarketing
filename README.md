@@ -1,148 +1,223 @@
-# Kinspire CoreHire™ Candidate Profile Form
+# Kinspire CoreHire™ AI-Powered Candidate Profile
 
-A web-based form application that allows you to fill out a Kinspire CoreHire™ Candidate Profile and export it as PDF or Word document with the exact same design as the original template.
+An intelligent web application that uses **OpenAI GPT** to automatically analyze CVs and job descriptions, then auto-fills a complete Kinspire CoreHire™ Candidate Profile ready for PDF export.
 
-## Features
+---
 
-- ✅ **Exact Design Match**: Recreates the Kinspire CoreHire™ document design with precise colors, fonts, and layout
-- 📝 **Interactive Form**: Fill in all bracketed fields with a user-friendly web interface
-- 📄 **PDF Export**: Download a professionally formatted PDF with your filled-in data
-- 📎 **Word Export**: Download a Microsoft Word document (.docx) with your data
-- 🎨 **Brand Consistent**: Maintains all original branding elements including logo, colors, and geometric designs
+## ✨ Features
 
-## How to Use
+- 🤖 **AI-Powered Analysis**: Upload a CV and job description, and GPT automatically fills out the entire profile
+- 📄 **CV Text Extraction**: Supports PDF, DOC, DOCX, and TXT file formats
+- 📝 **Smart Form Filling**: AI analyzes candidate skills, experience, and cultural fit
+- 📎 **PDF Export**: Download professionally formatted PDFs matching the original Kinspire design
+- 📎 **Word Export**: Export to Microsoft Word format
+- 🔒 **Secure API Key Storage**: Your OpenAI API key stays in the `.env` file, never exposed to browsers
 
-### 1. Open the Application
+---
 
-Simply open the `index.html` file in your web browser:
-- Double-click on `index.html`, or
-- Right-click and select "Open with" → Your preferred browser (Chrome, Firefox, Edge, etc.)
+## 🚀 Quick Start Guide
 
-### 2. Fill Out the Form
+### Prerequisites
 
-The form includes all fields from the original document with brackets `[[FIELD_NAME]]`. Fill in each field:
+- **Node.js** (version 14 or higher) - [Download here](https://nodejs.org/)
+- **OpenAI API Key** - [Get one here](https://platform.openai.com/api-keys)
 
-**Page 1 - Candidate Overview:**
-- Full Name
-- Headline/Tagline
-- Job Position (Company & Role Title)
-- Potential for Success
-- Opening Narrative
-- Success Factors (3 items)
-- Support Needs (2 items)
+### Step 1: Install Dependencies
 
-**Page 2 - Candidate Portrait:**
-- Signature Skills & Superpowers (5 items)
-- Motivators & Values (4 items)
-- Ideal Work Environment (3 items)
+Open a terminal in this folder and run:
 
-**Page 3 - Alignment & DNA:**
-- Strategic Needs (5 items)
-- Matching Strengths (5 items)
-- Corporate DNA Alignment details
-- Career Highlights (5 items)
+```bash
+npm install
+```
 
-**Page 4 - Growth & Risk:**
-- Growth Vector, Motivators, Blind Spots, Integration Practices
-- Public Records & Online Footprint (4 items)
-- Risk Assessment Summary (4 checkboxes with descriptions)
+This installs the required packages (Express, OpenAI SDK, etc.)
 
-**Page 5 - Leadership & Assessment:**
-- Leadership Archetype and Style (3 items)
-- Behavioral & Communication Insights (5 items)
-- Predicted Assessment Profile (DISC, MBTI, Enneagram, etc.)
+### Step 2: Configure Your API Key
 
-### 3. Export Your Document
+1. Open the `.env` file in this folder
+2. Find this line:
+   ```
+   OPENAI_API_KEY=sk-your-api-key-here
+   ```
+3. Replace `sk-your-api-key-here` with your actual OpenAI API key:
+   ```
+   OPENAI_API_KEY=sk-proj-abc123...your-actual-key...
+   ```
+4. Save the file
 
-Once you've filled out all the necessary fields:
+> ⚠️ **Important**: Never share your `.env` file or commit it to version control. The `.gitignore` file is already configured to exclude it.
 
-**For PDF Export:**
-1. Click the **"Export as PDF"** button at the bottom of the form
-2. Wait for the generation process to complete
-3. The PDF will automatically download to your default downloads folder
-4. Filename format: `Kinspire_CoreHire_[Candidate Name].pdf`
+### Step 3: Start the Server
 
-**For Word Export:**
-1. Click the **"Export as Word"** button at the bottom of the form
-2. The Word document will automatically download
-3. Filename format: `Kinspire_CoreHire_[Candidate Name].docx`
+```bash
+npm start
+```
 
-## Design Elements
+You should see:
+```
+🚀 ═══════════════════════════════════════════════════════
+   KINSPIRE COREHIRE SERVER STARTED
+═══════════════════════════════════════════════════════════
 
-The application preserves all original design elements:
+   🌐 Open in browser: http://localhost:3000
 
-- **Colors**: 
-  - Primary Purple: `#8B1874`
-  - Accent Pink: `#E8B4D9`
-  - Dark Purple: `#3D1E33`
+   ✅ OpenAI API key configured
+   🤖 Using model: gpt-4o-mini
+```
 
-- **Typography**: Professional sans-serif fonts matching the original
+### Step 4: Open the Application
 
-- **Layout**: 
-  - Header with Kinspire logo and "GET KINSPIRED" tagline
-  - Structured sections with proper spacing
-  - Footer with geometric design elements
+Open your browser and go to: **http://localhost:3000**
 
-- **Branding**: 
-  - Original Kinspire logo (stick figure design)
-  - Contact information footer
-  - Professional dividers and section breaks
+---
 
-## Technical Details
+## 📋 How to Use the AI Analysis
 
-### Technologies Used
+### 1. Check Server Status
 
-- **HTML5**: Semantic structure
-- **CSS3**: Styling and layout
-- **JavaScript (ES6+)**: Interactive functionality
-- **jsPDF**: PDF generation
-- **html2canvas**: HTML to canvas conversion for PDF
-- **html-docx-js**: Word document generation
+At the top of the page, you'll see a status indicator:
+- ✅ **Green**: Server connected, API key configured - ready to use!
+- ⚠️ **Orange**: Server connected but API key missing - edit `.env` file
+- ❌ **Red**: Server not running - run `npm start`
 
-### Browser Compatibility
+### 2. Upload a CV
 
-The application works best in modern browsers:
-- ✅ Google Chrome (recommended)
-- ✅ Mozilla Firefox
-- ✅ Microsoft Edge
-- ✅ Safari
+- Click the upload area or drag & drop a file
+- Supported formats: **PDF** (recommended), DOC, DOCX, TXT
+- The extracted text will appear in a preview box
 
-### File Structure
+### 3. Enter Job Description
+
+Choose one of two methods:
+- **Paste Full Description**: Copy/paste the entire job posting
+- **Enter Key Details**: Fill in structured fields (title, company, requirements)
+
+### 4. Analyze & Fill Profile
+
+1. Click the **"🔍 Analyze & Fill Profile"** button
+2. Wait 10-30 seconds while AI analyzes the data
+3. Watch as all form fields are automatically filled
+4. Review and edit any fields if needed
+
+### 5. Export
+
+- Click **"Export as PDF"** for a professional PDF document
+- Click **"Export as Word"** for an editable Word document
+
+---
+
+## 📁 File Structure
 
 ```
 mdea/
-├── index.html       # Main HTML form
-├── styles.css       # Styling and design
-├── script.js        # JavaScript functionality
-└── README.md        # This file
+├── .env                 # Your API key (KEEP SECRET!)
+├── .gitignore           # Prevents .env from being shared
+├── package.json         # Node.js dependencies
+├── server.js            # Backend server (handles AI requests)
+├── ai-integration.js    # Frontend AI logic
+├── index.html           # Main web page
+├── styles.css           # Styling
+├── script.js            # PDF/Word export functionality
+└── README.md            # This file
 ```
 
-## Tips for Best Results
+---
 
-1. **Fill All Fields**: For the best-looking output, fill in all fields before exporting
-2. **Review Before Export**: Double-check all entries for accuracy
-3. **Use Descriptive Text**: The more detailed your entries, the more professional the output
-4. **Check Your Browser**: Use a modern, updated browser for best compatibility
-5. **Save Your Work**: The form doesn't automatically save, so keep your source data elsewhere if needed
+## ⚙️ Configuration Options
 
-## Troubleshooting
+Edit the `.env` file to customize:
 
-**PDF generation is slow:**
-- This is normal for multi-page documents. Wait for the "Generating PDF..." message to complete.
+```env
+# Your OpenAI API key (required)
+OPENAI_API_KEY=sk-your-api-key-here
 
-**Word document doesn't look right:**
-- Open the .docx file in Microsoft Word for best results
-- Some formatting may vary in other word processors
+# AI Model (optional)
+# gpt-4o-mini = Faster, cheaper (~$0.001 per analysis)
+# gpt-4o = More accurate, detailed (~$0.01 per analysis)
+OPENAI_MODEL=gpt-4o-mini
 
-**Export button is disabled:**
-- Wait for any current export to complete
-- Refresh the page if the button stays disabled
+# Server port (optional, default 3000)
+PORT=3000
+```
 
-**Missing images in export:**
-- Ensure you have an internet connection (for loading external libraries)
-- Check that JavaScript is enabled in your browser
+---
 
-## Support
+## 💰 API Costs
+
+The application uses OpenAI's pay-per-use API:
+
+| Model | Cost per Analysis | Quality |
+|-------|------------------|---------|
+| gpt-4o-mini | ~$0.001-0.005 | Good |
+| gpt-4o | ~$0.01-0.03 | Excellent |
+
+Most analyses cost less than 1 cent with gpt-4o-mini.
+
+---
+
+## 🔧 Troubleshooting
+
+### "Server not running" error
+- Make sure you ran `npm start` in the terminal
+- Check that no other application is using port 3000
+
+### "API key not configured" warning
+- Open `.env` and add your real OpenAI API key
+- Restart the server after editing `.env`
+
+### "Invalid API key" error
+- Verify your API key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+- Make sure you copied the entire key (starts with `sk-`)
+
+### "Insufficient credits" error
+- Add a payment method at [platform.openai.com/account/billing](https://platform.openai.com/account/billing)
+- OpenAI requires prepaid credits
+
+### CV text not extracting
+- **PDF**: Should work automatically
+- **DOC/DOCX**: Try converting to PDF first for best results
+- **TXT**: Works directly
+
+### PDF export looks different
+- Use Google Chrome for best results
+- Wait for all content to load before exporting
+
+---
+
+## 🔒 Security Notes
+
+1. **API Key Protection**: Your API key is stored only in `.env` and read by the server. It never goes to the browser.
+
+2. **Git Safety**: The `.gitignore` file prevents `.env` from being committed to version control.
+
+3. **Local Processing**: CV text is sent to OpenAI for analysis but not stored anywhere permanently.
+
+4. **No Data Collection**: This application doesn't collect or store any user data.
+
+---
+
+## 🛠️ Development
+
+### Running in Development Mode
+```bash
+npm start
+```
+
+### Changing the Port
+Edit `.env`:
+```
+PORT=8080
+```
+
+### Using a Different AI Model
+Edit `.env`:
+```
+OPENAI_MODEL=gpt-4o
+```
+
+---
+
+## 📞 Support
 
 For issues or questions, contact:
 - 📞 +1.520.488.7277
@@ -150,6 +225,6 @@ For issues or questions, contact:
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: 2024  
+**Version**: 2.0 (AI-Powered)  
+**Last Updated**: November 2025  
 **Created for**: Kinspire CoreHire™ Candidate Profiling
